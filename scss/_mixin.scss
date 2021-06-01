@@ -1,0 +1,22 @@
+// BOTONES
+@mixin btn {
+  display: inline-block;
+  justify-content: center;
+  font-size: 1em;
+  background: #27aae1;
+  border-radius: 100px;
+  padding: 10px 50px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 10rem;
+}
+
+@mixin btn-mas {
+  text-decoration: none;
+  color: $color-texto1;
+  padding: 0.5rem 1rem;
+  transition: 0.5s;
+}
+

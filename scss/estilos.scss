@@ -1,0 +1,613 @@
+@import "variables";
+@import "mixin";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $fuente;
+}
+
+body {
+  background-color: $body-color;
+  width: $completa;
+  height: $completa;
+}
+
+// INDEX-HOME
+.logo {
+  position: fixed;
+  top: 3rem;
+  left: 5rem;
+  cursor: pointer;
+  width: 200px;
+  z-index: 2;
+}
+
+#menu {
+  position: fixed;
+  top: 3rem;
+  right: 5rem;
+  cursor: pointer;
+  width: 40px;
+  z-index: 2;
+}
+
+#menuNav {
+  display: none;
+  position: fixed;
+  top: 0;
+  padding-top: 7rem;
+  z-index: 3;
+  height: $completa;
+  width: 250px;
+  background: linear-gradient(to bottom, #132a7d, #2e313e);
+  a {
+    display: flex;
+    padding: 5px 0px 10px 50px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: $color-texto1;
+    &:hover {
+      color: $color-primario;
+    }
+  }
+  .menuCierre {
+    top: 3rem;
+    right: 11rem;
+    position: fixed;
+    img {
+      width: 30px;
+      cursor: pointer;
+    }
+  }
+}
+
+#menuNav.visible {
+  right: 0;
+  display: block;
+  background: linear-gradient(to bottom, #132a7d, #2e313e);
+}
+
+.mainIndex {
+  background: #000;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+  video {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.showcase {
+  display: inline-block;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+}
+
+.text {
+  display: flex;
+  display: block;
+  align-items: center;
+  text-align: center;
+  h2 {
+    font-size: 9rem;
+    font-weight: 800;
+    line-height: 7rem;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1rem;
+    text-transform: uppercase;
+    margin-top: 4vh;
+  }
+  p {
+    font-size: 1em;
+    margin: 30px 0;
+    font-weight: 400;
+    max-width: 500px;
+  }
+  a {
+    @include btn;
+    &:hover {
+      background: #fff;
+    }
+  }
+}
+
+.social {
+  margin: 2rem;
+  color: $color-texto1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin-right: 1em;
+  }
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 0.3rem;
+    img {
+      width: 35px;
+      &:hover {
+        transform: scale(1.2);
+        transition: 0.2s;
+      }
+    }
+  }
+}
+
+// FOOTER
+#miFooter {
+  display: flex;
+  display: inline-block;
+  align-items: center;
+  background-color: #111;
+  width: $completa;
+  height: 20vh;
+  top: 0rem;
+  z-index: 1;
+  p {
+    margin-top: 2rem;
+    text-align: center;
+    color: $color-primario;
+  }
+}
+
+#miFooterContacto {
+  display: flex;
+  display: inline-block;
+  align-items: center;
+  background-color: #111;
+  width: $completa;
+  height: 20vh;
+  top: 0;
+  z-index: 1;
+  p {
+    margin-top: 2rem;
+    text-align: center;
+    color: $color-primario;
+  }
+}
+
+.misRedes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ul {
+    line-height: 1rem;
+
+    li {
+      list-style: none;
+      a {
+        display: inline-block;
+        padding: 1rem 0.5rem 0rem 0.5rem;
+        img {
+          width: 35px;
+          &:hover {
+            transform: scale(1.2);
+            transition: 0.2s;
+          }
+        }
+      }
+    }
+  }
+}
+
+// PLAYAS
+.showcasePlayas {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: $completa;
+  height: $completa;
+  margin-top: 4rem;
+  line-height: 2rem;
+}
+
+.showcaseImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $completa;
+  height: 40vh;
+  object-fit: cover;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.textPlayas {
+  color: $color-texto1;
+  width: 50rem;
+  margin-top: 7rem;
+  h2 {
+    font-size: 8rem;
+    font-weight: $ancho-fuente2;
+    line-height: 12rem;
+    text-transform: uppercase;
+    padding: 2rem;
+    p {
+      font-size: 3em;
+      margin: 300px 0;
+      font-weight: $ancho-fuente1;
+      max-width: 500px;
+    }
+  }
+}
+
+#playas-item {
+  width: $completa;
+  height: $completa;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.fila {
+  display: flex;
+  width: $completa;
+  height: $completa;
+  margin-top: 7rem;
+  padding: 0rem 0rem 2rem 0rem;
+}
+
+.fila1 {
+  display: flex;
+  justify-content: center;
+  width: $completa;
+  height: $completa;
+  margin-top: 7rem;
+  img {
+    width: 23rem;
+  }
+}
+
+.playas-img {
+  display: flex;
+  justify-content: space-between;
+  img {
+    padding-right: 0;
+    width: 20rem;
+    height: $completa;
+    a {
+      font-weight: 300;
+      padding: 2.5rem;
+      width: 25rem;
+      height: 27rem;
+    }
+  }
+}
+
+.like {
+  display: flex;
+  height: $completa;
+  align-items: flex-start;
+  top: 0;
+  padding: 1rem;
+  img {
+    width: 2rem;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+#playas-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $color-texto2;
+  padding: 1rem 2rem;
+  h2 {
+    width: $completa;
+    p {
+      width: $completa;
+    }
+  }
+}
+
+.btn-playas {
+  display: block;
+  justify-content: center;
+  font-size: 1.1rem;
+  padding: 1rem;
+  a {
+    @include btn-mas;
+    &:hover {
+      opacity: 0.7;
+      border: 1px solid #ccc;
+    }
+  }
+}
+
+// PLAYAS
+.miFila {
+  display: flex;
+  width: 100vw;
+  height: $completa;
+  margin-top: 7rem;
+  justify-content: center;
+  .likeBlog {
+    display: flex;
+    align-items: flex-start;
+    top: 0;
+    padding: 1rem;
+    img {
+      width: 2rem;
+      height: 2rem;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.miImg {
+  display: flex;
+  justify-content: space-between;
+  width: 17rem;
+  height: 17rem;
+  padding: 0rem 2rem 2rem 2rem;
+}
+
+#miText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $color-texto2;
+  // padding: 1rem 2rem;
+  h2 {
+    width: $completa;
+    p {
+      width: $completa;
+    }
+  }
+}
+
+.miBtn {
+  display: block;
+  justify-content: center;
+  font-size: 1.1rem;
+  padding: 1rem;
+  a {
+    @include btn-mas;
+    &:hover {
+      opacity: 0.7;
+      border: 1px solid #ccc;
+    }
+  }
+}
+
+// SHOP
+.shop-img {
+  top: 0;
+  width: 24rem;
+  height: 25rem;
+  padding: 0rem 2rem 2rem 0rem;
+}
+
+.misRedes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  li {
+    list-style: none;
+    a {
+      display: inline-block;
+      padding: 1rem 0.5rem 0rem 0.5rem;
+      img {
+        width: 35px;
+        &:hover {
+          transform: scale(1.2);
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+}
+
+#miFooterShop {
+  display: inline-block;
+  align-items: center;
+  background-color: #111;
+  width: 100%;
+  height: 22vh;
+  p {
+    margin-top: 2rem;
+    text-align: center;
+    color: $color-primario;
+  }
+}
+
+// FORMULARIO
+#footerForm {
+  display: inline-block;
+  align-items: center;
+  background: #111;
+  width: $completa;
+  height: 17vh;
+  z-index: 10;
+  p {
+    margin-top: 1rem;
+    text-align: center;
+    color: $color-primario;
+  }
+}
+
+// MEDIAQUERY
+@media (max-width: 375px) {
+  .logo {
+    left: 2rem;
+    width: 9rem;
+  }
+  #menu {
+    right: 4rem;
+    width: 2rem;
+  }
+  #menuNav.visible {
+    width: 16rem;
+    a {
+      padding: 8px 0px 8px 42px;
+      width: 5.2rem;
+      font-size: 1.5rem;
+    }
+    .menuCierre {
+      top: 3rem;
+      left: 7rem;
+      z-index: 100;
+      position: fixed;
+      img {
+        padding: 0rem 3rem;
+        width: 2rem;
+      }
+      a {
+        padding: 10px 0px 8px 14px;
+      }
+    }
+  }
+
+  .showcase {
+    display: inline-block;
+    margin-top: 10rem;
+    .text {
+      display: block;
+      text-align: center;
+      padding: 1.5rem;
+      h2 {
+        font-size: 4rem;
+        line-height: 2.5rem;
+      }
+      h3 {
+        font-size: 2.4rem;
+      }
+      p {
+        font-size: 0.7rem;
+        margin: 35px;
+      }
+      a {
+        padding: 6px 27px;
+      }
+    }
+  }
+
+  .social {
+    display: none;
+    width: $completa;
+    p {
+      margin-right: 0;
+    }
+  }
+
+  .textPlayas {
+    display: inline-block;
+    text-align: center;
+    h2 {
+      font-size: 5rem;
+      line-height: 4.5rem;
+    }
+    h3 {
+      font-size: 2.4rem;
+    }
+    p {
+      font-size: 0.7rem;
+      margin: 35px;
+    }
+  }
+
+  .playas-img img {
+    padding-right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .fila {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .like img {
+    width: 1rem;
+  }
+
+  #miText {
+    font-size: 0.5rem;
+  }
+
+  .miImg {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  main {
+    top: 0;
+  }
+
+  .fila1 {
+    display: inline-block;
+    img {
+      width: 100%;
+    }
+  }
+
+  .like {
+    width: 1rem;
+  }
+
+  #playas-text {
+    display: block;
+  }
+
+  form {
+    padding: 0rem 2rem 5rem 2rem;
+  }
+
+  img.shop-img {
+    width: 100%;
+    height: 25rem;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #menuNav.visible .menuCierre img {
+    right: 9rem;
+    display: flex;
+    position: fixed;
+  }
+
+  .logo {
+    width: 12rem;
+  }
+
+  .showcase .text h2 {
+    font-size: 6rem;
+    line-height: 3.5rem;
+  }
+}
+
+.shop-img img {
+  width: 41rem;
+  height: 25rem;
+  padding: 0rem 5rem 0rem 5rem;
+  margin-left: 4rem;
+}
+
+.textPlayas h2 {
+  font-size: 5rem;
+  line-height: 4.5rem;
+}
